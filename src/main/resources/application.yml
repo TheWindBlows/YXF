@@ -1,0 +1,29 @@
+server:
+  port: 9901
+  
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/demo?charset=utf8
+    username: root
+    password: 123456
+  jpa:
+    show-sql: true #显示Sql语句
+    hibernate:
+      ddl-auto: none #每次启动重新update表
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect #采用innoDb数据库
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    jedis:
+      pool:
+        #连接池最大连接数（使用负值表示没有限制）
+        max-active: 100
+        #连接池中的最小空闲连接
+        max-idle: 10
+        #连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: 100000
+    #连接超时时间（毫秒）
+    timeout: 5000
+    #默认是索引为0的数据库
+    database: 0
