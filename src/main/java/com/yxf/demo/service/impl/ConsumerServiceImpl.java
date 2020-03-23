@@ -83,7 +83,7 @@ public class ConsumerServiceImpl implements ConsumerService {
 		pushConsumer.setMaxReconsumeTimes(5);
 		// 设置需要消费的主题与标签消息
 		pushConsumer.subscribe("Topic_Demo_tansaction", "*");
-		// 设置消息的监听
+		// 设置消息的监听 采用一个线程来进行拉取
 		pushConsumer.setMessageListener(new MessageListenerOrderly() {
 			// 可一次性拉取多条消息
 			@Override

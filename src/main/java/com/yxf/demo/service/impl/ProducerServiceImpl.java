@@ -73,8 +73,10 @@ public class ProducerServiceImpl implements ProducerService {
 			// 参数：消息信息；选中指定的消息队列对象；指定对应的队列下标
 			SendResult result = producer.send(
 					m,
+					// 消息队列的选择器
 					new MessageQueueSelector() {
 						@Override
+						// 消息队列集合；消息对象；业务表示参数
 						public MessageQueue select(List<MessageQueue> mqs, Message msg, Object arg) {
 							//　获取外部参数设定的队列的下标
 							Integer index = (Integer) arg;
