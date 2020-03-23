@@ -24,7 +24,8 @@ public class QuickSort {
 	public void partition(int[] num,int l,int r) {
 		int tag,tmp;
 		int i = l; 
-	    int j = r;// 判断是否还需要左右西东
+	    int j = r;
+	    // 判断是否还需要左右移动
 	    if (i >= j) {
 	    	return;
 	    }

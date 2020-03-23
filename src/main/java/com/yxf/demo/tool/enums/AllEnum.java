@@ -42,7 +42,16 @@ public enum AllEnum {
 	GATEWAY_ERROR(504, "网关转发超时!"),
 	
 	/** 登出 */
-	LOGIN_OUT(200, "登出");
+	LOGIN_OUT(200, "登出"),
+	
+	/** 线程执行中状态 */
+	THREAD_STATUS_UNKNOW(0, "线程执行中状态"),
+	
+	/** 线程执行成功状态 */
+	THREAD_STATUS_SUCCESS(1, "线程执行成功状态"),
+	
+	/** 线程执行失败状态 */
+	THREAD_STATUS_ERROR(2, "线程执行失败状态");
 	
 	private Integer code;
 
