@@ -10,7 +10,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableCaching //　开启缓存
 @EnableSwagger2 // 开启swagger
 @SpringBootApplication
-@MapperScan("com.yxf.demo.dao.xmlmapper")
+// @MapperScan("com.yxf.demo.dao.xmlmapper")
 public class DemoShiroApplication {
 
 	public static void main(String[] args) {

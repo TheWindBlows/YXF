@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 import javax.annotation.Resource;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -17,20 +18,23 @@ import com.yxf.demo.mode.from.UserSaveFrom;
 import com.yxf.demo.service.UserService;
 
 @Service
+// Spring 4.0以上不推荐使用注解方式，推荐采用构造器或Setter两种方式
+// 该注解主要使用Lombok，内部实际默认采用构造器，使用final进行修饰，使得其必须要初始化
+@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 	
 	//@Autowired是先按类型进行bean注入.如果没有再使用参数名
 	
-	@Autowired
-	private UserRepository userRepository;
+	// @Autowired
+	private final UserRepository userRepository;
 
 	/**
 	 * @Resource是先按参数名进行bean注入,如果没有再使用类型
 	 * 如果这里想要设置属性类型就必须通过@Resource进行注入,因为使用@Autowired注入会找不到
 	 * RedisTemplate<String, User>这个类型的RedisTemplate
 	 */
-	 @Resource
-	 private RedisTemplate<String, User> redisTemplate;
+	 // @Resource
+	 private final RedisTemplate<String, User> redisTemplate;
 	
 	@Override
 	public void saveUser(UserSaveFrom userForm) {

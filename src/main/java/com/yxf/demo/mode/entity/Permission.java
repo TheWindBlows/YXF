@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.experimental.Accessors;
 import org.hibernate.annotations.GenericGenerator;
 
 import lombok.Getter;
@@ -14,6 +15,8 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+// 添加链式编程
+@Accessors(chain = true)
 @Table(name = "PERMISSION")
 public class Permission {
 	

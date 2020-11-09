@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/demo?charset=utf8
+    url: jdbc:mysql://127.0.0.1:3306/demo?charset=utf8?charset=utf8
     username: root
     password: 123456
   jpa:
@@ -28,8 +28,8 @@ spring:
     # 默认是索引为0的数据库
     database: 0
     
-mybatis:
+#mybatis:
   # 扫描xml映射文件
-  mapper-locations: classpath:Mapper/*
+  #mapper-locations: classpath:Mapper/*
   # 扫描映射实力类
-  type-aliases-package: com.yxf.demo.mode.entity
+  #type-aliases-package: com.yxf.demo.mode.entity
