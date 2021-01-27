@@ -6,6 +6,6 @@ import com.yxf.demo.mode.entity.Order;
 
 public interface XmlOrderMapper {
 
-	public Order findXmlByOrderId(@Param("orderId") String orderId);
+	Order findXmlByOrderId(@Param("orderId") String orderId);
 	
 }

@@ -20,18 +20,21 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.log4j.Log4j2;
 
+import javax.annotation.Resource;
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/user")
 @Log4j2
 @Api(tags = "用户管理层")
 public class UserController {
 	
-	@Autowired
+	@Resource
 	private UserService userService;
 
 	@ApiOperation("用户新增")
 	@PostMapping("/saveUser")
-	public Object saveUser(@RequestBody @ApiParam UserSaveFrom userForm) {
+	public Object saveUser(@Valid @RequestBody UserSaveFrom userForm) {
 		userService.saveUser(userForm);
 		ResultObject result = new ResultObject();
 		result.setResultCode(AllEnum.SUCCESS.getCode());

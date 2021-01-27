@@ -73,15 +73,23 @@
 	   	<dependency>
 	    	<groupId>io.springfox</groupId>
 	       	<artifactId>springfox-swagger2</artifactId>
-	       	<version>2.5.0</version>
+	       	<version>3.0.0</version>
 	   	</dependency>
 	   	
 	   	<!-- swagger-ui -->
 	   	<dependency>
 	   	    <groupId>io.springfox</groupId>
 	   	    <artifactId>springfox-swagger-ui</artifactId>
-	   	    <version>2.5.0</version>
+	   	    <version>3.0.0</version>
    		</dependency>
+
+		<!-- http://localhost:9901/doc.html -->
+		<!-- knife4j 优化Swagger页面UI 需要3.0.0版本以上-->
+		<dependency>
+			<groupId>com.github.xiaoymin</groupId>
+			<artifactId>knife4j-spring-boot-starter</artifactId>
+			<version>3.0.2</version>
+		</dependency>
    		
    		<!-- 添加redis -->
         <dependency>
@@ -131,7 +139,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!-- Docker maven plugin -->
+			<!-- Docker maven plugin
         	<plugin>
 	            <groupId>com.spotify</groupId>
 	            <artifactId>docker-maven-plugin</artifactId>
@@ -148,6 +156,7 @@
 	                </resources>
 	            </configuration>
 	        </plugin>
+	        -->
         	<!-- Docker maven plugin -->
 		</plugins>
 	</build>
