@@ -24,7 +24,7 @@ import org.apache.rocketmq.remoting.common.RemotingHelper;
 import org.springframework.stereotype.Service;
 
 import com.yxf.demo.service.ProducerService;
-import com.yxf.demo.tool.Global.MQGlobal;
+import com.yxf.demo.tool.global.MQGlobal;
 import com.yxf.demo.tool.enums.AllEnum;
 
 /**

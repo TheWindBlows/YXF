@@ -16,7 +16,7 @@ import org.apache.rocketmq.remoting.common.RemotingHelper;
 import org.springframework.stereotype.Service;
 
 import com.yxf.demo.service.ConsumerService;
-import com.yxf.demo.tool.Global.MQGlobal;
+import com.yxf.demo.tool.global.MQGlobal;
 
 /**
  * @Description:消费者实现

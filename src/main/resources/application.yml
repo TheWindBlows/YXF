@@ -27,7 +27,12 @@ spring:
     timeout: 5000
     # 默认是索引为0的数据库
     database: 0
-    
+
+# actuator 端点监控 health接口添加详细信息-
+management:
+  endpoint:
+    health:
+      show-details: always
 #mybatis:
   # 扫描xml映射文件
   #mapper-locations: classpath:Mapper/*

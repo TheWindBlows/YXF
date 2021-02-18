@@ -1,4 +1,4 @@
-package com.yxf.demo.tool.Global;
+package com.yxf.demo.tool.global;
 
 /**
  * @Description:MQ常量

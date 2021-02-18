@@ -43,6 +43,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- 添加端点监控 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 		
 		<!-- 添加JPA -->
 		<dependency>
@@ -90,7 +96,7 @@
 			<artifactId>knife4j-spring-boot-starter</artifactId>
 			<version>3.0.2</version>
 		</dependency>
-   		
+
    		<!-- 添加redis -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -139,7 +145,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!-- Docker maven plugin
+			<!-- Docker maven plugin -->
         	<plugin>
 	            <groupId>com.spotify</groupId>
 	            <artifactId>docker-maven-plugin</artifactId>
@@ -156,7 +162,6 @@
 	                </resources>
 	            </configuration>
 	        </plugin>
-	        -->
         	<!-- Docker maven plugin -->
 		</plugins>
 	</build>
